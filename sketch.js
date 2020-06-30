@@ -13,7 +13,7 @@ var background;
 var score = 0;
 
 function preload() {
-    backgroundImg = "sprites/sscchhooooll.png";
+    backgroundImg = "sprites/playground.png";
 }
 
 function setup(){
@@ -21,6 +21,8 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
+
+    backgroundImg = loadImage(backgroundImg);
     ground = new Ground(600,height,1200,20);
     platform = new Ground(150, 305, 300, 170);
 
@@ -48,7 +50,7 @@ function setup(){
 function draw(){
 
  
-    background("sprites/sscchhooooll.png");
+    background(backgroundImg);
     
         noStroke();
         textSize(35)
